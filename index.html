@@ -16,8 +16,9 @@
     <script src="javascripts/jquery.pagination.js"></script>
         <script type="text/javascript">
         $(document).ready(function(){
-        var    playlist=[],
+        	var playlist=[],
 		homepage='http://www.truejesuschurch.info';
+	        var description = 'TJC双语讲道，听道学习两不误';
             	//这是一个非常简单的demo实例，让列表元素分页显示
 	//回调函数的作用是显示对应分页的列表项内容
 	//回调函数在用户每次点击分页链接的时候执行
@@ -35,23 +36,19 @@
 
 	function pageselectCallback(page_index, jq){
 		playlist = medialist.slice(page_index*10,page_index*10+10);
-		$("#playlist").empty();
-		for (var i=0;i<playlist.length;i++){
-			var item = playlist[i];
-			$("#playlist").append('<li>'+item.title+'</li>'); //装载对应分页的内容
-		}
-
-		return false;
-	}
-            var description = 'TJC双语讲道，听道学习两不误';
-
-            $('#player').ttwMusicPlayer(playlist, {
+            	$('#player').ttwMusicPlayer(playlist, {
                 autoPlay:false, 
                 description:description,
                 jPlayer:{
                     swfPath:'js' //You need to override the default swf path any time the directory structure changes
                 }
             });
+
+		return false;
+	}
+        
+
+
         });
     </script>
 </head>
