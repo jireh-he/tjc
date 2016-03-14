@@ -36,7 +36,7 @@
 
 	function pageselectCallback(page_index, jq){
 		playlist = medialist.slice(page_index*10,page_index*10+10);
-            	$('#player').ttwMusicPlayer(playlist, {
+            	$('#player').empty().ttwMusicPlayer(playlist, {
                 autoPlay:false, 
                 description:description,
                 jPlayer:{
