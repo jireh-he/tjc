@@ -16,6 +16,11 @@
     <script type="text/javascript">
         //<![CDATA[
         $(document).ready(function(){
+            //初始自适应大小
+var w=window,d=document,e= d.documentElement,
+    width=(w.innerWidth || e.clientWidth || g.clientWidth)*0.8,
+    height= w.innerHeight|| e.clientHeight|| g.clientHeight;
+    
             var playlist=medialist.slice(0,5);
 
 
@@ -50,7 +55,10 @@
                 playlist = medialist.slice(page_index*5,page_index*5+5);
                 myPlaylist.setPlaylist(playlist);
                 return false;
-            }
+            };
+            
+            $("jp-video-270p").css("width",width);
+            $("jp-jplayer").css("width",width);
         });
 
 
