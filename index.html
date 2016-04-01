@@ -17,9 +17,7 @@
         //<![CDATA[
         $(document).ready(function(){
             //初始自适应大小
-var w=window,d=document,e= d.documentElement,
-    width=(w.innerWidth || e.clientWidth || g.clientWidth)*0.9,
-    height= w.innerHeight|| e.clientHeight|| g.clientHeight;
+
     
             var playlist=medialist.slice(0,5);
 
@@ -57,15 +55,6 @@ var w=window,d=document,e= d.documentElement,
                 return false;
             };
             
-            $(".jp-video-270p").css("width",width);
-            $(".jp-jplayer").css("width",width);
-            $(".jp-jplayer img").css("width",width);
-            $(".jp-interface,.jp-seek-bar,.jp-controls-holder").css("width",width);
-            $(".jp-volume-controls ").css("marginLeft",1);
-            $(".jp-volume-controls ").css("width",width*0.2);
-            $(".jp-controls ").css("marginLeft",width*0.3);
-            $(".jp-toggles").css("marginRight",1);
-            $(".jp-toggles").css("width",width*0.2);
             
         });
 
